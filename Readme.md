@@ -68,20 +68,26 @@ Q(s,a) += (V(s)-Q(s,a))/N(s,a)
 ----------
 Here we manually defined a whole search space (see example.json):
 
+![](img/1.png)
+
+Purple value on the edge a from step s means the prior probability of choosing a from s. Note that one edge(choice) may generate multiple child nodes (multiple branches must all be solved). Blue value on the node means the prior value function of the node V(s). Green node means a successful ending, while red node means a step/state which has no choice to go down --a failed ending.
 
 The example of how to use the MCTS_BASE class can be seen in example.py
 
 The result of MCTS with mcts_times = 3, max_route_len = 6, max_search_depth = 2:
 
-For single-route generation:
+For single-route generation (see answers_0_route_0):
+![](img/2.png)
 
 For multi-route generation, here we make the program generate 3 alternative routes with beam search:
 
-Top-1 answer (see) is the same as that in single-route generation.
+Top-1 answer (see answers_1_route_0) is the same as that in single-route generation.
 
-Top-2 answer (see):
+Top-2 answer (see answers_1_route_1):
+![](img/3.png)
 
-Top-3 answer (see): 
+Top-3 answer (see answers_1_route_2): 
+![](img/4.png)
 
 As only 2 routes in the whole search space can reach successful ending, the top-3 answer reports a failed result.
 
