@@ -12,7 +12,7 @@ and provide a method to judge wether a state(step/node) is a successful ending.
 
 **example.py** shows an example of how to use this program. Neural networks, computational programs etc. can be linked to the program to generate choices, probability distribution and value.
 
-# Technical Points of Implementation#
+# Technical Points of Implementation #
 
 ----------
 1. **API and Inheritance.** This program provides an API for MCTS tasks. Users can link their own problems to the MCTS backbone through inheritance of the base class MCTS_BASE, as is described in **Introduction** and **Example** part. Policy and value generated through MCTS can be saved for Reinforcement Learning in this program.
