@@ -61,13 +61,13 @@ Choose the edge a with the max(Q(s,a)+U(s,a)) and go to its child nodes.
 3. **Backup.**  For each node, for each edge a visited:
 
 - N(s,a)++.
-- 
+
 - V = 1 if s is a successful end node; V = -1 if s has no child to search down; V = value function(s) if search depth reaches max count and s is not an end state mentioned above. For other nodes (internal nodes):
-- 
+
 - For avg method, V(s) = mean(V(branch[i] of the choice picked) for branch[i] in a choice) if V(branch[i]) for all i is not -1 else -1.
-- 
+
 - For min method, V(s) = min(V(branch[i] of the choice picked) for branch[i] in a choice) if V(branch[i]) for all i is not -1 else -1.
-- 
+
 - Q(s,a) += (V(s)-Q(s,a))/N(s,a)
 
 # An Example for Your Reference #
