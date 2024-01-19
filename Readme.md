@@ -79,9 +79,9 @@ Here we manually defined a whole search space (see **example.json**):
 
 Purple value on the edge a from step s means the prior probability of choosing a from s. Note that one edge(choice) may generate multiple child nodes (multiple branches must all be solved). Blue value on the node means the prior value function of the node V(s). Green node means a successful ending, while red node means a step/state which has no choice to go down --a failed ending. These generating method and judging method need to be defined by user.
 
-The example of how to use the MCTS_BASE class can be seen in **example.py**
+The example of how to use the MCTS_BASE class with this specific problem can be seen in **example.py**
 
-The results of MCTS with **mcts_times = 3, max_route_len = 6, max_search_depth = 2** are as follows:
+The results of running **example.py** with **mcts_times = 3, max_route_len = 6, max_search_depth = 2** are as follows:
 
 For single-route generation (see **answers_0_route_0**):
 ![](img/2.png)
